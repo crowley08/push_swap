@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:40:17 by saandria          #+#    #+#             */
-/*   Updated: 2024/04/30 13:56:39 by saandria         ###   ########.fr       */
+/*   Updated: 2024/04/30 15:13:23 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,14 @@ int	main(int argc, char *argv[])
 	b = NULL;
 	a = create_stack(args, i);
 	printf("size a:%d\nsize b:%d\n" , stack_size(a), stack_size(b));
-	//rra(&a);
+/*	//rra(&a);
 	//sa(&a);
 	pb(&a, &b);
 	pb(&a, &b);
 	pb(&a, &b);
-	printf("size a:%d\nsize b:%d\n" , stack_size(a), stack_size(b));
+	printf("size a:%d\nsize b:%d\n" , stack_size(a), stack_size(b));*/
+	if (stack_size(a) == 3)
+		sort_three(&a);
 	write(1, "a\n", 2);
 	while (a)
 	{
