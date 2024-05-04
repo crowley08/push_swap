@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:13:29 by saandria          #+#    #+#             */
-/*   Updated: 2024/04/30 13:41:24 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/04 08:47:28 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,15 @@ void	add_stack(t_stack **root, t_stack *to_add)
 
 	if (!to_add)
 		return ;
-/*	if(!(root) || !(*root))
+	if(!(root) || !(*root))
 	{
 		(*root)->next = NULL;
 		(*root)->prev = NULL;
 		return ;
-	}*/
+	}
 	last = find_last(*root);
+	if (!last)
+		*root = to_add;
 	last->next = to_add;
 	to_add->next = NULL;
 	to_add->prev = last;

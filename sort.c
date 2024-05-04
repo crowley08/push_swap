@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:57:44 by saandria          #+#    #+#             */
-/*   Updated: 2024/04/30 15:13:54 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/04 11:24:48 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,16 @@ void	sort_three(t_stack **a)
 	}
 	else if (n1 > n2 && n2 < n3 && n3 < n1)
 		ra(a);	
+}
+
+void	ft_sort_five(t_stack **a, t_stack **b)
+{
+	while (stack_size(*a) > 3)
+	{
+		min_to_top(a);
+		pb(a, b);
+	}
+	sort_three(a);
+	while (stack_size(*b) > 0)
+		pa(b, a);
 }
