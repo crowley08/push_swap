@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 08:59:24 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/09 01:16:59 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/10 10:21:25 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	min_to_top(t_stack **a);
 void	ft_sort_five(t_stack **a, t_stack **b);
 void	as_index(t_stack **stack, int *tab);
 int	get_min_index(t_stack **stack);
+int get_max(t_stack **stack);
 //int find_index_to_move(t_stack *stack, int target);
 //int find_best_index_to_move(int *current_chunk, t_stack **a, int chunk_size);
 //void    r_or_rr(t_stack **a, int index_to_move);
