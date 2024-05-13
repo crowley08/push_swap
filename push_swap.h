@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 08:59:24 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/10 10:21:25 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/13 13:41:36 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,17 @@ int		get_min_place(t_stack **stack);
 int		first_value(t_stack **stack);
 int		last_value(t_stack **stack);
 void	min_to_top(t_stack **a);
+void    b_to_a(t_stack **a, t_stack **b);
+void	max_to_top(t_stack **a);
 void	ft_sort_five(t_stack **a, t_stack **b);
 void	as_index(t_stack **stack, int *tab);
 int	get_min_index(t_stack **stack);
+int	get_max_place(t_stack **stack);
+void	a_to_b(t_stack **a, t_stack **b);
+void	to_rr(t_stack **a, t_stack **b, int chunk, int j);
 int get_max(t_stack **stack);
+void    to_r(t_stack **a, t_stack **b, int chunk, int i);
+void    push_end(t_stack **a, t_stack **b, int chunk);
 //int find_index_to_move(t_stack *stack, int target);
 //int find_best_index_to_move(int *current_chunk, t_stack **a, int chunk_size);
 //void    r_or_rr(t_stack **a, int index_to_move);

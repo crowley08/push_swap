@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:40:17 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/10 11:02:13 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/13 13:46:06 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int argc, char *argv[])
 	t_stack	*b;
 	char	**args;
 	int		i;
-	int	*tab;
+	//int	*tab;
 	int	j;
 
 	i = 0;
@@ -40,9 +40,9 @@ int	main(int argc, char *argv[])
 	a = create_stack(args, i);
 	//printf("\033[1;93m [MIN A]: \033[0m %d    \033[\033[1;93m [INDEX] : \033[0m%d\n", get_min(&a), get_min_index(&a));
 	//tab = malloc(sizeof(int) * stack_size(a));
-	tab = create_array(a);
-	buble_sort(tab, stack_size(a));
-	j = 0;
+//	tab = create_array(a);
+//	buble_sort(tab, stack_size(a));
+	//j = 0;
 	/*printf("\033[1;32m [SORTED]:\033[0m\n");
 	while (j < stack_size(a))
 	{
@@ -50,111 +50,16 @@ int	main(int argc, char *argv[])
 		j++;
 	}*/
 	if (stack_size(a) > 5)
-		as_index(&a, tab);
+	{
+		a_to_b(&a, &b);
+		b_to_a(&a, &b);
+	//	printf("\033 [1;76m [max]: \033[0m%d\n", get_max_place(&b));
+	}
 	if (stack_size(a) == 3)
 		sort_three(&a);
 	else if (stack_size(a) == 4 || stack_size(a) == 5)
 		ft_sort_five(&a, &b);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 20);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 40);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 60);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 80);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
-	push_min(&a, &b, 100);
+//	push_min(&a, &b, 20);
 /*
 	printf("\033[1;98m [BACK_MIN]: \033[0m%d\n", get_val_back(&a, 20));
 	printf("\033[1;98m [BACK_MIN COUNt]: \033[0m%d\n", from_back(&a, 20));

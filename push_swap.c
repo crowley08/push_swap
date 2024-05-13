@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:02:59 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/08 15:04:12 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/13 14:49:42 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,29 @@ void	as_index(t_stack **stack, int *tab)
 			tmp = tmp->next;
 		}
 		i++;
+	}
+}
+
+void	a_to_b(t_stack **a, t_stack **b)
+{
+	int	*tab;
+	int	chunk;
+	int	size;
+
+	size = stack_size(*a);
+	tab = create_array(*a);
+	buble_sort(tab, stack_size(*a));
+	as_index(a, tab);
+	if (stack_size(*a) <= 250)
+		chunk = stack_size(*a) / 10;
+	else
+		chunk = stack_size(*a) / 20;
+	while (stack_size(*b) < size)
+	{
+		push_min(a, b, chunk);
+		free(tab);
+		tab = create_array(*a);
+		buble_sort(tab, stack_size(*a));
+		as_index(a, tab);
 	}
 }
