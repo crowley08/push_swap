@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:57:44 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/14 13:37:51 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/14 14:46:10 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	sort_three(t_stack **a)
 		ra(a);
 }
 
-void	ft_sort_five(t_stack **a, t_stack **b)
+void	ft_sort(t_stack **a, t_stack **b)
 {
 	while (stack_size(*a) > 3)
 	{
