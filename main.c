@@ -26,6 +26,7 @@ int	main(int argc, char *argv[])
 		return (0);
 	arg = get_input(argv);
 	args = ft_split(arg, ' ');
+	free(arg);
 	if (!check_input(args))
 	{
 		ft_error();
@@ -33,6 +34,7 @@ int	main(int argc, char *argv[])
 	}
 	b = NULL;
 	a = create_stack(args, i);
+	free(args);
 	if (is_sorted(a) == 1)
 		return (0);
 	else
