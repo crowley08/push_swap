@@ -15,16 +15,10 @@
 void	push_min(t_stack **a, t_stack **b, int chunk)
 {
 	int	top;
-	int	back;
 	int	i;
-	int	j;
-	int	k;
 
 	top = from_top(a, chunk);
-	back = from_back(a, chunk);
 	i = top;
-	j = back;
-	k = back;
 	to_r(a, b, chunk, i);
 }
 

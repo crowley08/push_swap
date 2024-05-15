@@ -14,12 +14,10 @@
 
 int	*create_array(t_stack *stack)
 {
-	int	tmp;
 	int	j;
 	int	size;
 	int	*tab;
 
-	tmp = 0;
 	j = 0;
 	size = stack_size(stack);
 	tab = malloc(sizeof(int) * (size));

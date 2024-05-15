@@ -45,12 +45,10 @@ void	to_r(t_stack **a, t_stack **b, int chunk, int i)
 
 void	to_rr(t_stack **a, t_stack **b, int chunk, int j)
 {
-	int	top_val;
 	int	back_val;
 	int	median;
 
 	median = chunk / 2;
-	top_val = get_val_top(a, chunk);
 	back_val = get_val_back(a, chunk);
 	while (first_value(a) != back_val && j >= 1)
 	{

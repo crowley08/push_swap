@@ -22,6 +22,7 @@ t_stack	*stack_new(int value)
 	new->value = value;
 	new->next = NULL;
 	new->prev = NULL;
+	return (new);
 }
 
 t_stack	*find_last(t_stack *stack)
