@@ -28,10 +28,6 @@ int	ft_nbr_cmp(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
-	if (s1[i] == '-' && s2[j] != '-')
-		return (s1[i] - s2[i]);
-	else
-		return (s1[i] - s2[i]);
 	if (s1[i] == '+')
 	{
 		if (s2[j] != '+')
