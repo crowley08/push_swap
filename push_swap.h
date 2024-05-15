@@ -59,6 +59,7 @@ int		first_value(t_stack **stack);
 void	sort(t_stack *a, t_stack *b);
 int		last_value(t_stack **stack);
 void	min_to_top(t_stack **a);
+int		is_sorted(t_stack *a);
 void	b_to_a(t_stack **a, t_stack **b);
 void	max_to_top(t_stack **a);
 void	ft_sort(t_stack **a, t_stack **b);

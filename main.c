@@ -35,5 +35,9 @@ int	main(int argc, char *argv[])
 	}
 	b = NULL;
 	a = create_stack(args, i);
-	sort(a, b);
+	if (is_sorted(a) == 1)
+		return (0);
+	else
+		sort(a, b);
+	return (0);
 }

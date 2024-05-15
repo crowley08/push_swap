@@ -63,3 +63,17 @@ void	to_rr(t_stack **a, t_stack **b, int chunk, int j)
 		rb(b);
 	}
 }
+
+int	is_sorted(t_stack *a)
+{
+	t_stack	*tmp;
+
+	tmp = a;
+	while (tmp->next != NULL)
+	{
+		if (tmp->value > tmp->next->value)
+			return (0);
+		tmp = tmp->next;
+	}
+	return (1);
+}
