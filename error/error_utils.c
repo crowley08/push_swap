@@ -1,41 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   error_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 09:40:17 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/14 12:56:10 by saandria         ###   ########.fr       */
+/*   Created: 2024/05/15 17:10:11 by saandria          #+#    #+#             */
+/*   Updated: 2024/05/15 17:10:14 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <stdio.h>
+#include "../push_swap.h"
 
-int	main(int argc, char *argv[])
+int	ft_nbr_cmp(char *s1, char *s2)
 {
-	t_stack	*a;
-	t_stack	*b;
-	char	**args;
-	char	*arg;
-	int		i;
+	int	i;
+	int	j;
 
 	i = 0;
-	if (argc == 1)
-		return (0);
-	arg = get_input(argv);
-	args = ft_split(arg, ' ');
-	if (!check_input(args))
+	j = 0;
+	if (s1[i] == '+')
 	{
-		ft_error();
-		return (0);
+		if (s2[j] != '+')
+			i++;
 	}
-	b = NULL;
-	a = create_stack(args, i);
-	if (is_sorted(a) == 1)
-		return (0);
 	else
-		sort(a, b);
-	return (0);
+	{
+		if (s2[j] == '+')
+			j++;
+	}
+	while (s1[i] != '\0' && s2[j] != '\0' && s1[i] == s2[j])
+	{
+		i++;
+		j++;
+	}
+	return (s1[i] - s2[i]);
+}
+
+int	is_sign(char c)
+{
+	if (c == '-' || c == '+')
+		return (1);
+	else
+		return (0);
 }
