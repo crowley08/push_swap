@@ -66,7 +66,7 @@ void	a_to_b(t_stack **a, t_stack **b)
 	if (stack_size(*a) <= 250)
 		chunk = stack_size(*a) / 10;
 	else
-		chunk = stack_size(*a) / 20;
+		chunk = stack_size(*a) / 17;
 	while (stack_size(*b) < size)
 	{
 		push_min(a, b, chunk);
@@ -75,4 +75,25 @@ void	a_to_b(t_stack **a, t_stack **b)
 		buble_sort(tab, stack_size(*a));
 		as_index(a, tab);
 	}
+}
+
+char	*get_input(char **argv)
+{
+	int		i;
+	char	*arg;
+
+	i = 1;
+	arg = " ";
+	while (argv[i])
+	{
+		argv[i] = ft_strjoin(argv[i], " ");
+		i++;
+	}
+	i = 1;
+	while (argv[i])
+	{
+		arg = ft_strjoin(arg, argv[i]);
+		i++;
+	}
+	return (arg);
 }

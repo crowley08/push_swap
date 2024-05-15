@@ -51,6 +51,9 @@ t_stack	*find_last(t_stack *stack);
 void	add_stack(t_stack **root, t_stack *to_add);
 t_stack	*create_stack(char **args, int i);
 int		stack_size(t_stack *stack);
+void	ft_error(void);
+int		check_double(t_stack *stack);
+char	*get_input(char **argv);
 /*****sort*****/
 void	sort_three(t_stack **a);
 int		get_min(t_stack **stack);
