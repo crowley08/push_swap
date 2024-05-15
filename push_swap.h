@@ -58,6 +58,7 @@ int		ft_nbr_cmp(char *s1, char *s2);
 int		is_sign(char c);
 int		is_num(char *arg);
 int		check_input(char **args);
+void	check_value(int value);
 int		check_double(char **args);
 /*****sort*****/
 void	sort_three(t_stack **a);

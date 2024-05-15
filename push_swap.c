@@ -19,11 +19,13 @@ t_stack	*create_stack(char **args, int i)
 	int		value;
 
 	value = ft_atoi(args[i]);
+	check_value(value);
 	stack = stack_new(value);
 	i++;
 	while (args[i])
 	{
 		value = ft_atoi(args[i]);
+		check_value(value);
 		tmp = stack_new(value);
 		add_stack(&stack, tmp);
 		i++;

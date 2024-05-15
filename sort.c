@@ -55,6 +55,11 @@ void	ft_sort(t_stack **a, t_stack **b)
 
 void	sort(t_stack *a, t_stack *b)
 {
+	if (stack_size(a) == 2)
+	{
+		if (a->value > a->next->value)
+			sa(&a);
+	}
 	if (stack_size(a) > 5)
 	{
 		a_to_b(&a, &b);
