@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 13:55:42 by saandria          #+#    #+#             */
-/*   Updated: 2024/04/17 08:36:37 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/16 09:08:46 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct s_list
 }					t_list;
 
 //libc func
+long	ft_atol(const char *nptr);
 int		ft_isalpha(int al);
 int		ft_isdigit(int dig);
 int		ft_isalnum(int n);
@@ -49,7 +50,7 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s);
 //additionnal func
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strtrim(char const *s, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);

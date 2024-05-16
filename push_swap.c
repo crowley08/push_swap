@@ -6,26 +6,33 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:02:59 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/14 13:41:52 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/16 10:02:45 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*create_stack(char **args, int i)
+t_stack	*create_stack(char **args)
 {
 	t_stack	*stack;
 	t_stack	*tmp;
 	int		value;
+	long	lvalue;
+	int		i;
 
+	i = 0;
 	value = ft_atoi(args[i]);
-	check_value(value);
+	lvalue = ft_atol(args[i]);
+	if (check_value(lvalue) == 1)
+		exit (1);
 	stack = stack_new(value);
 	i++;
 	while (args[i])
 	{
 		value = ft_atoi(args[i]);
-		check_value(value);
+		lvalue = ft_atol(args[i]);
+		if (check_value(lvalue) == 1)
+			exit (1);
 		tmp = stack_new(value);
 		add_stack(&stack, tmp);
 		i++;
@@ -77,6 +84,7 @@ void	a_to_b(t_stack **a, t_stack **b)
 		buble_sort(tab, stack_size(*a));
 		as_index(a, tab);
 	}
+	free(tab);
 }
 
 char	*get_input(char **argv)
@@ -85,16 +93,11 @@ char	*get_input(char **argv)
 	char	*arg;
 
 	i = 1;
-	arg = " ";
-	while (argv[i])
-	{
-		argv[i] = ft_strjoin(argv[i], " ");
-		i++;
-	}
-	i = 1;
+	arg = ft_strdup("");
 	while (argv[i])
 	{
 		arg = ft_strjoin(arg, argv[i]);
+		arg = ft_strjoin(arg, " ");
 		i++;
 	}
 	return (arg);

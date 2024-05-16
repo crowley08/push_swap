@@ -6,19 +6,20 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 17:10:11 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/15 17:10:14 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/16 08:23:25 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	check_value(int value)
+int	check_value(long value)
 {
-	if (value > 2147483647 || value < -2147483647)
+	if (value > 2147483647 || value < -2147483648)
 	{
 		ft_error();
-		return ;
+		return (1);
 	}
+	return (0);
 }
 
 int	ft_nbr_cmp(char *s1, char *s2)

@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 08:59:24 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/14 14:46:22 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/16 10:03:03 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	pb(t_stack **a, t_stack **b);
 t_stack	*stack_new(int value);
 t_stack	*find_last(t_stack *stack);
 void	add_stack(t_stack **root, t_stack *to_add);
-t_stack	*create_stack(char **args, int i);
+t_stack	*create_stack(char **args);
 int		stack_size(t_stack *stack);
 char	*get_input(char **argv);
 /*****error*****/
@@ -58,7 +58,7 @@ int		ft_nbr_cmp(char *s1, char *s2);
 int		is_sign(char c);
 int		is_num(char *arg);
 int		check_input(char **args);
-void	check_value(int value);
+int		check_value(long value);
 int		check_double(char **args);
 /*****sort*****/
 void	sort_three(t_stack **a);

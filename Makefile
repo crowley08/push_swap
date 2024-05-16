@@ -1,7 +1,7 @@
 CC	= gcc
-FLAGS	= -Wall -Werror -Wextra -I -g
+FLAGS	= -Wall -Werror -Wextra -g
 NAME	= push_swap
-SRCS	= error/error.c error/error_utils.c \
+SRCS	= 	error/error.c error/error_utils.c \
 			instructions/push.c instructions/rev_rotate.c instructions/rotate.c instructions/swap.c \
 			sort_utils/sort_utils.c sort_utils/sort_utils_2.c sort_utils/sort_utils_3.c \
 			utils/buble_sort.c utils/condition.c utils/stack_utils.c \
