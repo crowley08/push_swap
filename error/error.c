@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 11:47:58 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/16 08:24:49 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/16 10:23:15 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	ft_error(void)
 
 	reset_color = "\033[0m";
 	red_color = "\033[0;91m";
-	write(1, red_color, 7);
-	write(1, "[ERROR]\n", 8);
-	write(1, reset_color, 4);
+	write(2, red_color, 7);
+	write(2, "[ERROR]\n", 8);
+	write(2, reset_color, 4);
 }
