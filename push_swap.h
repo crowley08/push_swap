@@ -49,11 +49,12 @@ void	pb(t_stack **a, t_stack **b);
 t_stack	*stack_new(int value);
 t_stack	*find_last(t_stack *stack);
 void	add_stack(t_stack **root, t_stack *to_add);
-t_stack	*create_stack(char **args);
+t_stack	*create_stack(char **args, int i);
 int		stack_size(t_stack *stack);
 char	*get_input(char **argv);
 void	free_stack(t_stack **a);
 void	free_split(char **spl);
+void	create_stack_loop(t_stack **stack, char **args, int i, long lvalue);
 /*****error*****/
 void	ft_error(void);
 int		ft_nbr_cmp(char *s1, char *s2);

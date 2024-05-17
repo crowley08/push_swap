@@ -26,18 +26,8 @@ void	free_split(char **spl)
 	free(spl);
 }
 
-int	main(int argc, char *argv[])
+static void	if_error(char **args)
 {
-	t_stack	*a;
-	t_stack	*b;
-	char	**args;
-	char	*arg;
-
-	if (argc == 1)
-		return (0);
-	arg = get_input(argv);
-	args = ft_split(arg, ' ');
-	free(arg);
 	if (args[0] == 0)
 	{
 		free_split(args);
@@ -50,7 +40,22 @@ int	main(int argc, char *argv[])
 		ft_error();
 		exit (1);
 	}
-	a = create_stack(args);
+}
+
+int	main(int argc, char *argv[])
+{
+	t_stack	*a;
+	t_stack	*b;
+	char	**args;
+	char	*arg;
+
+	if (argc == 1)
+		return (0);
+	arg = get_input(argv);
+	args = ft_split(arg, ' ');
+	free(arg);
+	if_error(args);
+	a = create_stack(args, 0);
 	free_split(args);
 	b = NULL;
 	if (is_sorted(a) == 1)

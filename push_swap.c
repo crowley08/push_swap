@@ -12,15 +12,12 @@
 
 #include "push_swap.h"
 
-t_stack	*create_stack(char **args)
+t_stack	*create_stack(char **args, int i)
 {
 	t_stack	*stack;
-	t_stack	*tmp;
 	int		value;
 	long	lvalue;
-	int		i;
 
-	i = 0;
 	value = ft_atoi(args[i]);
 	lvalue = ft_atol(args[i]);
 	if (check_value(lvalue) == 1)
@@ -30,20 +27,7 @@ t_stack	*create_stack(char **args)
 	}
 	stack = stack_new(value);
 	i++;
-	while (args[i])
-	{
-		value = ft_atoi(args[i]);
-		lvalue = ft_atol(args[i]);
-		if (check_value(lvalue) == 1)
-		{
-			free_split(args);
-			free_stack(&stack);
-			exit (1);
-		}
-		tmp = stack_new(value);
-		add_stack(&stack, tmp);
-		i++;
-	}
+	create_stack_loop(&stack, args, i, lvalue);
 	return (stack);
 }
 

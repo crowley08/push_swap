@@ -72,3 +72,24 @@ int	stack_size(t_stack *stack)
 	}
 	return (size);
 }
+
+void	create_stack_loop(t_stack **stack, char **args, int i, long lvalue)
+{
+	t_stack	*tmp;
+	int		value;
+
+	while (args[i])
+	{
+		value = ft_atoi(args[i]);
+		lvalue = ft_atol(args[i]);
+		if (check_value(lvalue) == 1)
+		{
+			free_split(args);
+			free_stack(stack);
+			exit (1);
+		}
+		tmp = stack_new(value);
+		add_stack(stack, tmp);
+		i++;
+	}
+}
