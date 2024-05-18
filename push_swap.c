@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:02:59 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/17 20:32:35 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/18 07:37:56 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ char	*get_input(char **argv)
 	while (argv[i])
 	{
 		arg = ft_strjoin(arg, argv[i]);
-		if (!argv[i] || *argv[i] == ' ')
+		if (!argv[i] || *argv[i] == ' ' || argv[i][0] == '\0')
 		{
 			ft_error();
 			free(arg);
