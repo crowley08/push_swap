@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 08:59:24 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/16 14:17:07 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/21 10:13:07 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int		check_input(char **args);
 int		check_value(long value);
 int		check_double(char **args);
 /*****sort*****/
+int		high_to_low(t_stack *a);
 void	sort_three(t_stack **a);
 int		get_min(t_stack **stack);
 int		get_min_place(t_stack **stack);

@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:13:29 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/14 13:50:06 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/21 10:08:13 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	create_stack_loop(t_stack **stack, char **args, int i, long lvalue)
 			free_split(args);
 			free_stack(stack);
 			exit (1);
-		}
+		} 
 		tmp = stack_new(value);
 		add_stack(stack, tmp);
 		i++;

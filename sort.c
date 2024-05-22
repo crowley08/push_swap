@@ -6,7 +6,7 @@
 /*   By: saandria <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:57:44 by saandria          #+#    #+#             */
-/*   Updated: 2024/05/16 14:11:55 by saandria         ###   ########.fr       */
+/*   Updated: 2024/05/21 10:14:15 by saandria         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,13 @@ void	sort(t_stack *a, t_stack *b)
 	}
 	if (stack_size(a) > 5)
 	{
-		a_to_b(&a, &b);
-		b_to_a(&a, &b);
+		if (high_to_low(a) == 1)
+			ft_sort(&a, &b);
+		else
+		{
+			a_to_b(&a, &b);
+			b_to_a(&a, &b);
+		}
 	}
 	if (stack_size(a) == 3)
 		sort_three(&a);
